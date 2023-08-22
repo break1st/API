@@ -12,4 +12,13 @@ export interface PersonsDatabase {
 
     getPersons(): Promise<Person[]>
     getOnePersonByID(id: number): Promise<Person | null>
+    createNewPerson(name: string,
+        age: number,
+        nacionalidade: string) : Promise<Person[] | null>
+    editInfoPerson(id: number
+        ,name: string
+        ,age: number,
+        nacionalidade: string) : Promise <Person[] | null>
+    removePerson(id: number) : Promise <Person[] | null>
 }
+
